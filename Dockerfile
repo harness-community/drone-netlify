@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL maintainer="Ravi Lachhman"
 LABEL org.label-schema.version=latest
-LABEL org.label-schema.vcs-url="https://github.com/lucaperret/drone-netlify"
+LABEL org.label-schema.vcs-url="https://github.com/ravilach/drone-netlify"
 LABEL org.label-schema.name="drone-netlify"
 LABEL org.label-schema.description="Deploying to netlify with Drone CI"
 LABEL org.label-schema.vendor="Harness"
