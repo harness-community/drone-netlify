@@ -1,6 +1,6 @@
 # Drone-netlify
 
-![Netlify logo](netlify.png?raw=true "netlify.com")
+An updated fork from: https://github.com/lucaperret/drone-netlify
 
 > Deploying to [Netlify](https://netlify.com) with [Drone](https://drone.io) CI.
 
