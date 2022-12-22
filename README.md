@@ -2,12 +2,11 @@
 
 An updated fork from: https://github.com/lucaperret/drone-netlify
 
-> Deploying to [Netlify](https://netlify.com) with [Drone](https://drone.io) CI.
+Deploying to [Netlify](https://netlify.com) with [Drone](https://drone.io) CI.
 
 Use case examples:
 
 - Automatically deploy and alias upon pushes to master
-
 
 There are two ways to deploy.
 
