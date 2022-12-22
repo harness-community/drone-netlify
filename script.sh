@@ -7,11 +7,25 @@ NETLIFY_SITE=""
 NETLIFY_DEPLOY_OPTIONS=""
 
 
+#Prod Flag
 if [ -n "$PLUGIN_PROD" ]
 then
     NETLIFY_DEPLOY_OPTIONS="--prod ${PLUGIN_PROD}"
 fi
 
+#Debug Flag
+if [ -n "$PLUGIN_DEBUG" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --debug ${PLUGIN_DEBUG}"
+fi
+
+#Message Flag
+if [ -n "$PLUGIN_MESSAGE" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_MESSAGE}"
+fi
+
+#Path Flag
 if [ -n "$PLUGIN_PATH" ]
 then
     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --dir ${PLUGIN_PATH}"
@@ -19,6 +33,7 @@ else
     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --dir ./"
 fi
 
+#Netlify Token
 if [ -z "$PLUGIN_TOKEN" ]
 then
     if [ -z "$NETLIFY_TOKEN" ]
@@ -30,6 +45,7 @@ then
     fi
 fi
 
+#Deploy Step
 if [ -n "$PLUGIN_SITE_ID" ] && [ -n "$PLUGIN_TOKEN" ]
 then
     NETLIFY_SITE="--auth $PLUGIN_TOKEN --site $PLUGIN_SITE_ID"
