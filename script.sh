@@ -19,6 +19,12 @@ then
      NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --debug ${PLUGIN_DEBUG}"
 fi
 
+#Timeout Flag
+if [ -n "$PLUGIN_TIMEOUT" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --timeout ${PLUGIN_TIMEOUT}"
+fi
+
 #Netlify CI Build Flag
 if [ -n "$PLUGIN_BUILD" ]
 then
