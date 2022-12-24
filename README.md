@@ -10,7 +10,7 @@ Use case examples:
 
 There are two ways to deploy.
 
-### From docker
+### From Docker
 
 Deploy the working directory to Netlify.
 
@@ -31,4 +31,11 @@ pipeline:
     image: rlachhman/netlify-drone-plugin
     token: xxxxx
     site_id: xxxxxxx-xxxx-xxx-xxxxxxxx
+```
+
+### Building from Docker
+
+```bash
+docker build --platform linux/amd64 -t rlachhman/netlify-drone-plugin .
+docker push rlachhman/netlify-drone-plugin    
 ```
