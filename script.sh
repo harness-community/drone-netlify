@@ -13,6 +13,18 @@ then
     NETLIFY_DEPLOY_OPTIONS="--prod ${PLUGIN_PROD}"
 fi
 
+#Context Flag
+if [ -n "$PLUGIN_CONTEXT" ]
+then
+    NETLIFY_DEPLOY_OPTIONS="--context ${PLUGIN_CONTEXT}"
+fi
+
+#Prod if Locked Flag
+if [ -n "$PLUGIN_PRODLOCKED" ]
+then
+    NETLIFY_DEPLOY_OPTIONS="--prod-if-unlocked ${PLUGIN_PRODLOCKED}"
+fi
+
 #Debug Flag
 if [ -n "$PLUGIN_DEBUG" ]
 then
