@@ -49,6 +49,24 @@ then
      NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_MESSAGE}"
 fi
 
+#Timeout Flag
+if [ -n "$PLUGIN_TIMEOUT" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_TIMEOUT}"
+fi
+
+#JSON Flag
+if [ -n "$PLUGIN_JSON" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_JSON}"
+fi
+
+#Skip Functions Cache Flag
+if [ -n "$PLUGIN_SKIPFUNCTIONSCACHE" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_SKIPFUNCTIONSCACHE}"
+fi
+
 #Upload Location Dir Flag
 if [ -n "$PLUGIN_DIR" ]
 then
