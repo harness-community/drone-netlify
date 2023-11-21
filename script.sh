@@ -96,7 +96,9 @@ then
     NETLIFY_SITE="--auth $PLUGIN_TOKEN --site $PLUGIN_SITE_ID"
     echo "> Executing: netlify deploy $NETLIFY_SITE $NETLIFY_DEPLOY_OPTIONS"
     echo "> Deploying on Netlify…" &&
-    netlify deploy $NETLIFY_SITE $NETLIFY_DEPLOY_OPTIONS;
+    netlify deploy $NETLIFY_SITE $NETLIFY_DEPLOY_OPTIONS | tee out.txt
+    draft_url=$(cat out.txt | grep -o 'Website draft URL: .*' | awk '{print $4}')
+    echo "DRAFT_URL=$draft_url" >> $DRONE_OUTPUT    
 else
     echo "> Error! site_id and token are required"
     exit 1
