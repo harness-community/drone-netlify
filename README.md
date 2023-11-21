@@ -2,13 +2,16 @@
 
 An updated fork from: https://github.com/lucaperret/drone-netlify
 
-Deploying to [Netlify](https://netlify.com) with [Drone](https://drone.io) CI.
+Deploying to [Netlify](https://netlify.com) with:
+* [Drone](https://drone.io)
+* [Gitness](https://gitness.com/)
+* [Harness CI](https://www.harness.io/products/continuous-integration)
 
 Use case examples:
 
 - Automatically deploy and alias upon pushes to master
 
-There are two ways to deploy.
+There are multiple ways to deploy to Netlify.
 
 ### From Docker
 
@@ -31,6 +34,27 @@ pipeline:
     image: rlachhman/netlify-drone-plugin
     token: xxxxx
     site_id: xxxxxxx-xxxx-xxx-xxxxxxxx
+```
+
+### From Harness CI
+
+```yaml
+- step:
+      identifier: <Harness-Identifier>
+      type: Plugin
+      name: <Step-Name>
+      spec:
+        connectorRef: <docker-hub-conector>
+        image: rlachhman/netlify-drone-plugin
+        privileged: true
+        settings:
+          dir: ./folder
+          prod: true
+          site_id: xxxxxxx-xxxx-xxx-xxxxxxxx
+          token: xxxxx
+          debug: "true"
+          build: "false"
+          context: deploy
 ```
 
 ### Building from Docker
