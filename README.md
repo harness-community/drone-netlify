@@ -39,6 +39,7 @@ pipeline:
 docker build --platform linux/amd64 -t rlachhman/netlify-drone-plugin .
 docker push rlachhman/netlify-drone-plugin    
 ```
+
 #### Building from Docker for a Specific Version
 For minor changes, sometimes Docker Builder will cache. For
 example a small NPM Change on Netlify or small Shell Change. 
