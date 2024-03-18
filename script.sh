@@ -61,12 +61,6 @@ then
      NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_JSON}"
 fi
 
-#Skip Functions Cache Flag
-if [ -n "$PLUGIN_SKIPFUNCTIONSCACHE" ]
-then
-     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --message ${PLUGIN_SKIPFUNCTIONSCACHE}"
-fi
-
 #Upload Location Dir Flag
 if [ -n "$PLUGIN_DIR" ]
 then
