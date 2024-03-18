@@ -1,6 +1,8 @@
 # Drone-netlify
 
-An updated fork from: https://github.com/lucaperret/drone-netlify
+:clap: An updated fork from: [https://github.com/lucaperret/drone-netlify](https://github.com/lucaperret/drone-netlify). Thanks for creating!
+
+:information_source: Current Repo Commands are based off of Netlify CLI Version [17.19.5](https://github.com/netlify/cli/releases/tag/v17.19.5)
 
 Deploying to [Netlify](https://netlify.com) with:
 * [Drone](https://drone.io)
