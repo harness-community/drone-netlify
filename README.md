@@ -72,6 +72,6 @@ example a small NPM Change on Netlify or small Shell Change.
 
 ```bash
 docker builder prune
-docker build --platform linux/amd64 --no-cache=true -t rlachhman/netlify-drone-plugin:1760 .
-docker push rlachhman/netlify-drone-plugin:1760    
+docker build --platform linux/amd64 --no-cache=true -t rlachhman/netlify-drone-plugin:17195 .
+docker push rlachhman/netlify-drone-plugin:17195    
 ```
