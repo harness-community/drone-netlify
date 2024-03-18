@@ -79,8 +79,6 @@ fi
 if [ -n "$PLUGIN_FUNCTIONS" ]
 then
     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --functions ${PLUGIN_FUNCTIONS}"
-else
-    NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --functions ./"
 fi
 
 #Skip Functions Cache Flag
