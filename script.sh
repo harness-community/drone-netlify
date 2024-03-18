@@ -75,6 +75,20 @@ else
     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --dir ./"
 fi
 
+#Functions Location Dir Flag
+if [ -n "$PLUGIN_FUNCTIONS" ]
+then
+    NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --functions ${PLUGIN_FUNCTIONS}"
+else
+    NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --functions ./"
+fi
+
+#Skip Functions Cache Flag
+if [ -n "$PLUGIN_SKIPFUNCTIONSCACHE" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --skip-functions-cache ${PLUGIN_SKIPFUNCTIONSCACHE}"
+fi
+
 #Netlify Token
 if [ -z "$PLUGIN_TOKEN" ]
 then
