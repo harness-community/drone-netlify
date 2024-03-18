@@ -4,7 +4,7 @@ LABEL maintainer="Ravi Lachhman"
 LABEL org.label-schema.version=latest
 LABEL org.label-schema.vcs-url="https://github.com/ravilach/drone-netlify"
 LABEL org.label-schema.name="drone-netlify"
-LABEL org.label-schema.description="Deploying to netlify with Drone CI"
+LABEL org.label-schema.description="Deploying to Netlify with Drone CI or Drone Compliant Plug-in Runners (Harness, Gitness)"
 LABEL org.label-schema.vendor="Harness"
 LABEL org.label-schema.schema-version="1.0"
 
