@@ -2,7 +2,7 @@
 
 :clap: An updated fork from: [https://github.com/lucaperret/drone-netlify](https://github.com/lucaperret/drone-netlify). Thanks for creating!
 
-:information_source: Current Repo Commands are based off of Netlify CLI Version [17.21.2](https://github.com/netlify/cli/releases/tag/v17.21.2)
+:information_source: Current Repo Commands are based off of Netlify CLI Version [17.23.1](https://github.com/netlify/cli/releases/tag/v17.23.1)
 
 Deploying to [Netlify](https://netlify.com) with:
 * [Drone](https://drone.io)
@@ -72,6 +72,6 @@ example a small NPM Change on Netlify or small Shell Change.
 
 ```bash
 docker builder prune
-docker build --platform linux/amd64 --no-cache=true -t rlachhman/netlify-drone-plugin:17212 .
-docker push rlachhman/netlify-drone-plugin:17212    
+docker build --platform linux/amd64 --no-cache=true -t rlachhman/netlify-drone-plugin:17231 .
+docker push rlachhman/netlify-drone-plugin:17231    
 ```
