@@ -81,6 +81,18 @@ then
      NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --skip-functions-cache ${PLUGIN_SKIPFUNCTIONSCACHE}"
 fi
 
+#Filter for MONOREPO Flag
+if [ -n "$PLUGIN_FILTER" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --filter ${PLUGIN_FILTER}"
+fi
+
+#Alias Flag
+if [ -n "$PLUGIN_ALIAS" ]
+then
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --alias ${PLUGIN_ALIAS}"
+fi
+
 #Netlify Token
 if [ -z "$PLUGIN_TOKEN" ]
 then
