@@ -8,9 +8,11 @@ NETLIFY_DEPLOY_OPTIONS=""
 
 
 #Prod Flag
+#Change in passing a value in CLI Version 17.33.4 and up. Just flag, no boolean. 
+#https://github.com/netlify/cli/issues/6769
 if [ -n "$PLUGIN_PROD" ]
 then
-    NETLIFY_DEPLOY_OPTIONS="--prod ${PLUGIN_PROD}"
+    NETLIFY_DEPLOY_OPTIONS="--prod"
 fi
 
 #Context Flag
@@ -26,9 +28,11 @@ then
 fi
 
 #Debug Flag
+#Change in passing a value in CLI Version 17.33.4 and up. Just flag, no boolean. 
+#https://github.com/netlify/cli/issues/6769
 if [ -n "$PLUGIN_DEBUG" ]
 then
-     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --debug ${PLUGIN_DEBUG}"
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --debug"
 fi
 
 #Timeout Flag
@@ -38,9 +42,11 @@ then
 fi
 
 #Netlify CI Build Flag
+#Change in passing a value in CLI Version 17.33.4 and up. Just flag, no boolean. 
+#https://github.com/netlify/cli/issues/6769
 if [ -n "$PLUGIN_BUILD" ]
 then
-     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --build ${PLUGIN_BUILD}"
+     NETLIFY_DEPLOY_OPTIONS="${NETLIFY_DEPLOY_OPTIONS} --build"
 fi
 
 #Message Flag

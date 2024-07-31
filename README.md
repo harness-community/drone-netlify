@@ -2,9 +2,9 @@
 
 :clap: An updated fork from: [https://github.com/lucaperret/drone-netlify](https://github.com/lucaperret/drone-netlify). Thanks for creating!
 
-:information_source: Current Repo Commands are based off of Netlify CLI Version [17.33.4](https://github.com/netlify/cli/releases/tag/v17.33.4)
+:information_source: Current Repo Commands are based off of Netlify CLI Version [17.33.5](https://github.com/netlify/cli/releases/tag/v17.33.5)
 
-Deploying to [Netlify](https://netlify.com) with:
+Deploying to [Netlify](https://cli.netlify.com/commands/deploy/) with:
 * [Drone](https://drone.io)
 * [Gitness](https://gitness.com/)
 * [Harness CI](https://www.harness.io/products/continuous-integration)
